@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { company, whatsappLink } from "@/data/site";
-import logo from "@/assets/ai-realty-logo.png.asset.json";
+import logo from "@/assets/ai-realty-logo.png";
 
 export function Footer() {
   const path = useRouterState({ select: (s) => s.location.pathname });
@@ -25,7 +25,7 @@ export function Footer() {
 
         <div className="mt-24 grid gap-12 border-t border-ivory/15 pt-12 sm:grid-cols-2 md:grid-cols-12">
           <div className="md:col-span-5">
-            <img src={logo.url} alt="A & I Realty" width={160} height={115} className="h-20 w-auto invert" />
+            <img src={logo} alt="A & I Realty" width={160} height={115} className="h-20 w-auto invert" />
             <p className="mt-4 max-w-xs text-sm text-ivory/60">Property, construction and design under one roof, in {company.city}.</p>
           </div>
           {cols.map((c) => (

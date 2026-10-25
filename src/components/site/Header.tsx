@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
-import logo from "@/assets/ai-realty-logo.png.asset.json";
+import logo from "@/assets/ai-realty-logo.png";
 import { company, whatsappLink } from "@/data/site";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
@@ -44,7 +44,7 @@ export function Header() {
         scrolled ? "h-16 rounded-full border border-charcoal/10 bg-ivory/80 px-5 shadow-float backdrop-blur-xl md:px-8" : `h-20 px-6 md:px-10 ${overDark ? "" : "bg-ivory/85 backdrop-blur-md"}`
       }`}>
         <Link to="/" aria-label="A & I Realty home" className="shrink-0">
-          <img src={logo.url} alt="A & I Realty" width={160} height={115} className={`w-auto transition-all duration-500 ${scrolled ? "h-10" : "h-12"} ${overDark || open ? "invert" : ""}`} />
+          <img src={logo} alt="A & I Realty" width={160} height={115} className={`w-auto transition-all duration-500 ${scrolled ? "h-10" : "h-12"} ${overDark || open ? "invert" : ""}`} />
         </Link>
         <nav className="hidden items-center gap-9 lg:flex">
           {nav.map((n) => (
@@ -93,7 +93,7 @@ function MapHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex h-16 items-center justify-between bg-ivory px-5 hairline">
       <Link to="/" aria-label="A & I Realty home">
-        <img src={logo.url} alt="A & I Realty" width={160} height={115} className="h-10 w-auto" />
+        <img src={logo} alt="A & I Realty" width={160} height={115} className="h-10 w-auto" />
       </Link>
       <div className="flex gap-6 text-sm">
         <Link to="/properties" className="link-lux">Listings</Link>
